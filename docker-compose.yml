@@ -1,4 +1,4 @@
-version: '3.9'
+
 services:
   db:
     image: postgres:15
@@ -14,7 +14,7 @@ services:
 
   api:
     build:
-      context: ../Backend
+      context: ../Blog-backend
       dockerfile: Blog.Api/Dockerfile
     container_name: blogapi
     environment:
@@ -27,7 +27,7 @@ services:
 
   front:
     build:
-      context: ../Frontend/blog-frontend
+      context: ../Blog-frontend/blog-frontend
       dockerfile: Dockerfile
     container_name: blogfront
     ports:
